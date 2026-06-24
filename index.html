@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Study Haven Library & Learning Center – Empowering students through knowledge with premium study resources, reading rooms, and career guidance." />
+  <meta name="keywords" content="Study Haven, library, learning center, study materials, exam preparation, educational institute" />
+  <meta name="author" content="Study Haven" />
+  <meta property="og:title" content="Study Haven – Empowering Students Through Knowledge" />
+  <meta property="og:description" content="Premium library and learning center offering study materials, reading rooms, digital resources, and career guidance." />
+  <meta property="og:type" content="website" />
+  <title>Study Haven – Empowering Students Through Knowledge</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════ LOADING SCREEN ══════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <i class="fas fa-book-open"></i>
+        <span>Study Haven</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════ CUSTOM CURSOR ══════════ -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- ══════════ SCROLL PROGRESS ══════════ -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Study Haven Home">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <span class="logo-text">Study<span class="accent">Haven</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+        <li><a href="#membership" class="nav-link">Plans</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#membership" class="btn btn-primary nav-cta">Join Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO SECTION ══════════ -->
+  <section id="home" class="hero">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content reveal">
+      <div class="hero-badge"><i class="fas fa-star"></i> #1 Learning Center in the City</div>
+      <h1 class="hero-title">
+        Empowering Students<br />
+        <span class="gradient-text">Through Knowledge</span>
+      </h1>
+      <p class="hero-subtitle">Study Haven Library &amp; Learning Center</p>
+      <p class="hero-desc">
+        Your ultimate destination for academic excellence. Access thousands of resources,
+        expert guidance, and a vibrant community of learners — all under one roof.
+      </p>
+      <div class="hero-actions">
+        <a href="#membership" class="btn btn-primary btn-lg" id="join-now-btn">
+          <i class="fas fa-rocket"></i> Join Now
+        </a>
+        <a href="#resources" class="btn btn-outline btn-lg" id="explore-btn">
+          <i class="fas fa-compass"></i> Explore Resources
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="1000">0</span><span>+</span>
+          <span class="hero-stat-label">Students</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="5000">0</span><span>+</span>
+          <span class="hero-stat-label">Resources</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="95">0</span><span>%</span>
+          <span class="hero-stat-label">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image reveal reveal-right">
+      <div class="hero-card-float card-1 glass-card">
+        <i class="fas fa-book-reader"></i>
+        <span>500+ Books Added This Month</span>
+      </div>
+      <div class="hero-card-float card-2 glass-card">
+        <i class="fas fa-trophy"></i>
+        <span>Top-Rated Study Center</span>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-inner">
+          <div class="floating-icon fi-1"><i class="fas fa-graduation-cap"></i></div>
+          <div class="floating-icon fi-2"><i class="fas fa-atom"></i></div>
+          <div class="floating-icon fi-3"><i class="fas fa-flask"></i></div>
+          <div class="floating-icon fi-4"><i class="fas fa-calculator"></i></div>
+          <div class="floating-icon fi-5"><i class="fas fa-microscope"></i></div>
+          <div class="hero-center-icon"><i class="fas fa-book-open"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT SECTION ══════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Our Story</div>
+        <h2 class="section-title">About <span class="gradient-text">Study Haven</span></h2>
+        <p class="section-desc">
+          Founded with a passion for education, Study Haven has been transforming the academic
+          journey of thousands of students through world-class facilities and resources.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <h3>A Space Built for Learners</h3>
+          <p>
+            Study Haven is more than just a library — it's an ecosystem designed to fuel academic
+            growth. We provide a serene, distraction-free environment complemented by a rich
+            repository of learning materials, mentorship programs, and modern digital tools.
+          </p>
+          <p>
+            Our carefully curated collection includes textbooks, reference guides, digital
+            databases, previous year exam papers, and cutting-edge study aids — all organized
+            for maximum accessibility.
+          </p>
+          <div class="about-highlights">
+            <div class="about-highlight"><i class="fas fa-check-circle"></i> CBSE &amp; State Board Resources</div>
+            <div class="about-highlight"><i class="fas fa-check-circle"></i> Competitive Exam Preparation (JEE, NEET, UPSC)</div>
+            <div class="about-highlight"><i class="fas fa-check-circle"></i> Digital Library Access 24/7</div>
+            <div class="about-highlight"><i class="fas fa-check-circle"></i> Certified Academic Mentors</div>
+          </div>
+          <a href="#services" class="btn btn-primary mt-20">Discover Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="about-cards reveal reveal-right">
+          <div class="about-card glass-card mission">
+            <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
+            <h4>Our Mission</h4>
+            <p>To create an inclusive, inspiring learning environment that empowers every student to reach their highest academic potential.</p>
+          </div>
+          <div class="about-card glass-card vision">
+            <div class="about-card-icon"><i class="fas fa-eye"></i></div>
+            <h4>Our Vision</h4>
+            <p>To become the most trusted learning partner for students across the region, bridging the gap between potential and achievement.</p>
+          </div>
+          <div class="about-card glass-card values">
+            <div class="about-card-icon"><i class="fas fa-heart"></i></div>
+            <h4>Our Values</h4>
+            <p>Excellence, integrity, inclusivity, and continuous growth guide everything we do at Study Haven.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid reveal">
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-num counter" data-target="1000">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Active Students</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-book"></i></div>
+          <div class="stat-num counter" data-target="5000">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Study Resources</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-smile"></i></div>
+          <div class="stat-num counter" data-target="95">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Student Satisfaction</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-num counter" data-target="8">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERVICES SECTION ══════════ -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">What We Offer</div>
+        <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-desc">
+          Comprehensive academic support services designed to help every student excel at every stage of their learning journey.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card reveal" id="service-library">
+          <div class="service-icon"><i class="fas fa-building-columns"></i></div>
+          <h3>Library Access</h3>
+          <p>Access our vast physical library with 5000+ books, journals, and reference materials organized by subject and level.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Open 6 AM – 11 PM</li>
+            <li><i class="fas fa-check"></i> Air-conditioned Reading Halls</li>
+            <li><i class="fas fa-check"></i> Silence &amp; Discussion Zones</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal" id="service-materials">
+          <div class="service-icon"><i class="fas fa-folder-open"></i></div>
+          <h3>Study Materials</h3>
+          <p>Curated notes, summaries, and study packs for all major boards and competitive examinations.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Board-aligned Content</li>
+            <li><i class="fas fa-check"></i> Printable PDF Notes</li>
+            <li><i class="fas fa-check"></i> Topic-wise Practice Sets</li>
+          </ul>
+          <a href="#resources" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal" id="service-exam">
+          <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Exam Preparation</h3>
+          <p>Structured preparation programs for JEE, NEET, UPSC, SSC, Banking exams and school board exams.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Mock Test Series</li>
+            <li><i class="fas fa-check"></i> Past Year Papers</li>
+            <li><i class="fas fa-check"></i> Performance Analytics</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal" id="service-rooms">
+          <div class="service-icon"><i class="fas fa-door-open"></i></div>
+          <h3>Reading Rooms</h3>
+          <p>Private and group reading rooms available for booking — perfect for focused study or collaborative sessions.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Private Cabins Available</li>
+            <li><i class="fas fa-check"></i> High-speed Wi-Fi</li>
+            <li><i class="fas fa-check"></i> Projector Rooms for Groups</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal" id="service-career">
+          <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Career Guidance</h3>
+          <p>Expert counselors help students navigate career choices, college admissions, and scholarship applications.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 1-on-1 Counseling</li>
+            <li><i class="fas fa-check"></i> College Admission Help</li>
+            <li><i class="fas fa-check"></i> Scholarship Information</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal" id="service-digital">
+          <div class="service-icon"><i class="fas fa-laptop"></i></div>
+          <h3>Digital Resources</h3>
+          <p>Access our online portal with e-books, video lectures, digital notes, and interactive quizzes anytime, anywhere.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 1000+ Video Lectures</li>
+            <li><i class="fas fa-check"></i> Digital E-library</li>
+            <li><i class="fas fa-check"></i> Mobile App Access</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ WHY CHOOSE US ══════════ -->
+  <section id="why" class="section why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Our Advantage</div>
+        <h2 class="section-title">Why Choose <span class="gradient-text">Study Haven</span>?</h2>
+        <p class="section-desc">We go beyond just providing a place to study. We create an environment where students thrive.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" id="why-env">
+          <div class="why-num">01</div>
+          <div class="why-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Quiet Study Environment</h3>
+          <p>Our thoughtfully designed study spaces maintain peace and focus — with designated noise-free zones and ambient lighting for maximum concentration.</p>
+        </div>
+        <div class="why-card reveal" id="why-support">
+          <div class="why-num">02</div>
+          <div class="why-icon"><i class="fas fa-headset"></i></div>
+          <h3>Expert Support</h3>
+          <p>Our team of academic mentors and subject experts are always available to assist with doubts, study plans, and exam strategies.</p>
+        </div>
+        <div class="why-card reveal" id="why-modern">
+          <div class="why-num">03</div>
+          <div class="why-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Modern Learning Resources</h3>
+          <p>From cutting-edge digital tools and e-books to AI-powered study aids — we keep our resources updated with the latest educational technology.</p>
+        </div>
+        <div class="why-card reveal" id="why-community">
+          <div class="why-num">04</div>
+          <div class="why-icon"><i class="fas fa-people-group"></i></div>
+          <h3>Student Community</h3>
+          <p>Join a thriving community of like-minded learners, participate in study groups, events, competitions, and build lifelong academic friendships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RESOURCES SHOWCASE ══════════ -->
+  <section id="resources" class="section resources">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Our Collection</div>
+        <h2 class="section-title">Resource <span class="gradient-text">Showcase</span></h2>
+        <p class="section-desc">Browse our extensive collection of study materials curated for every level and subject.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="resource-filters reveal" role="group" aria-label="Resource category filters">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="notes" id="filter-notes">Notes</button>
+        <button class="filter-btn" data-filter="books" id="filter-books">Books</button>
+        <button class="filter-btn" data-filter="papers" id="filter-papers">Past Papers</button>
+        <button class="filter-btn" data-filter="guides" id="filter-guides">Study Guides</button>
+        <button class="filter-btn" data-filter="digital" id="filter-digital">Digital</button>
+      </div>
+
+      <!-- Resource Cards Grid -->
+      <div class="resources-grid" id="resources-grid">
+
+        <div class="resource-card glass-card" data-category="notes" id="res-physics-notes">
+          <div class="resource-tag notes">Notes</div>
+          <div class="resource-icon"><i class="fas fa-atom"></i></div>
+          <h4>Physics Class 12</h4>
+          <p>Complete chapter-wise notes covering all CBSE topics with diagrams and formulas.</p>
+          <div class="resource-meta"><i class="fas fa-file-alt"></i> 120 Pages <span class="dot">•</span> <i class="fas fa-download"></i> 2.3k Downloads</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download Physics Class 12 Notes">Download <i class="fas fa-download"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="books" id="res-ncert-math">
+          <div class="resource-tag books">Books</div>
+          <div class="resource-icon"><i class="fas fa-calculator"></i></div>
+          <h4>NCERT Mathematics</h4>
+          <p>Complete NCERT Math textbook solutions for Class 10–12 with solved examples.</p>
+          <div class="resource-meta"><i class="fas fa-book"></i> 480 Pages <span class="dot">•</span> <i class="fas fa-star"></i> 4.9 Rating</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Access NCERT Mathematics Book">Access Book <i class="fas fa-external-link-alt"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="papers" id="res-jee-papers">
+          <div class="resource-tag papers">Past Papers</div>
+          <div class="resource-icon"><i class="fas fa-scroll"></i></div>
+          <h4>JEE Main 2015–2024</h4>
+          <p>10 years of JEE Main question papers with detailed solutions and answer keys.</p>
+          <div class="resource-meta"><i class="fas fa-layer-group"></i> 10 Years <span class="dot">•</span> <i class="fas fa-download"></i> 5.1k Downloads</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download JEE Main Papers">Download <i class="fas fa-download"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="guides" id="res-upsc-guide">
+          <div class="resource-tag guides">Study Guide</div>
+          <div class="resource-icon"><i class="fas fa-map"></i></div>
+          <h4>UPSC Prelims Guide</h4>
+          <p>Comprehensive strategy guide covering syllabus, resources, and month-by-month study plan.</p>
+          <div class="resource-meta"><i class="fas fa-calendar"></i> 12-Month Plan <span class="dot">•</span> <i class="fas fa-star"></i> 4.8 Rating</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download UPSC Prelims Guide">Download <i class="fas fa-download"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="digital" id="res-video-bio">
+          <div class="resource-tag digital">Digital</div>
+          <div class="resource-icon"><i class="fas fa-video"></i></div>
+          <h4>Biology Video Lectures</h4>
+          <p>100+ HD video lectures for NEET Biology covering all chapters with animations.</p>
+          <div class="resource-meta"><i class="fas fa-play-circle"></i> 100+ Videos <span class="dot">•</span> <i class="fas fa-clock"></i> 80 Hours</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Watch Biology Video Lectures">Watch Now <i class="fas fa-play"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="notes" id="res-chem-notes">
+          <div class="resource-tag notes">Notes</div>
+          <div class="resource-icon"><i class="fas fa-flask"></i></div>
+          <h4>Chemistry Revision Notes</h4>
+          <p>Quick revision notes for Organic, Inorganic and Physical Chemistry — perfect for last-minute prep.</p>
+          <div class="resource-meta"><i class="fas fa-file-alt"></i> 75 Pages <span class="dot">•</span> <i class="fas fa-download"></i> 1.8k Downloads</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download Chemistry Notes">Download <i class="fas fa-download"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="papers" id="res-neet-papers">
+          <div class="resource-tag papers">Past Papers</div>
+          <div class="resource-icon"><i class="fas fa-stethoscope"></i></div>
+          <h4>NEET 2018–2024</h4>
+          <p>7 years of NEET question papers with complete solutions across all three subjects.</p>
+          <div class="resource-meta"><i class="fas fa-layer-group"></i> 7 Years <span class="dot">•</span> <i class="fas fa-download"></i> 4.2k Downloads</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download NEET Papers">Download <i class="fas fa-download"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="digital" id="res-quiz-app">
+          <div class="resource-tag digital">Digital</div>
+          <div class="resource-icon"><i class="fas fa-brain"></i></div>
+          <h4>AI-Powered Quiz Portal</h4>
+          <p>Adaptive quiz platform that tests your knowledge and identifies weak areas for improvement.</p>
+          <div class="resource-meta"><i class="fas fa-question-circle"></i> 5000+ Questions <span class="dot">•</span> <i class="fas fa-robot"></i> AI-Powered</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Try AI Quiz Portal">Try Now <i class="fas fa-external-link-alt"></i></a>
+        </div>
+
+        <div class="resource-card glass-card" data-category="guides" id="res-ssc-guide">
+          <div class="resource-tag guides">Study Guide</div>
+          <div class="resource-icon"><i class="fas fa-landmark"></i></div>
+          <h4>SSC CGL Complete Guide</h4>
+          <p>End-to-end preparation guide for SSC CGL with topic priorities, time table, and tips.</p>
+          <div class="resource-meta"><i class="fas fa-calendar"></i> 6-Month Plan <span class="dot">•</span> <i class="fas fa-star"></i> 4.7 Rating</div>
+          <a href="#" class="btn btn-sm btn-outline" aria-label="Download SSC CGL Guide">Download <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIALS ══════════ -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Student Stories</div>
+        <h2 class="section-title">What Students <span class="gradient-text">Say About Us</span></h2>
+        <p class="section-desc">Hear from the students who have transformed their academic journey with Study Haven.</p>
+      </div>
+
+      <div class="testimonial-carousel reveal" role="region" aria-label="Student testimonials">
+        <div class="testimonial-track" id="testimonial-track">
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Study Haven completely changed my approach to studying. The resources are top-notch, and the environment is absolutely perfect for focused preparation. I cracked JEE Advanced with their support!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">A</div>
+              <div class="testimonial-info">
+                <strong>Moomin Sedeeq</strong>
+                <span>JEE Advanced 2024 – AIR 847</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"The digital resources and video lectures are exceptional. I could study anytime from anywhere. The mentors are incredibly supportive and helped me build a solid NEET strategy."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">P</div>
+              <div class="testimonial-info">
+                <strong>Moomin Sedeeq</strong>
+                <span>NEET 2024 – Score 680/720</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p class="testimonial-text">"As a UPSC aspirant, I needed a well-stocked library and quiet environment. Study Haven delivered on both fronts. The past year papers and study guides are incredibly well-organized."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">R</div>
+              <div class="testimonial-info">
+                <strong>Moomin Sedeeq</strong>
+                <span>UPSC CSE Aspirant, 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"The membership plans are incredibly affordable for the value you get. I opted for the Premium plan and it was worth every rupee. The career guidance sessions were a game-changer for me."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">S</div>
+              <div class="testimonial-info">
+                <strong>Moomin Sedeeq</strong>
+                <span>Class 12 CBSE – 97.4%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"I've visited many libraries but Study Haven is on another level. The reading rooms are peaceful, the staff is helpful, and the collection is vast. Highly recommend to every serious student!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">K</div>
+              <div class="testimonial-info">
+                <strong>Moomin Sedeeq</strong>
+                <span>CA Foundation – Top 5%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-btn" id="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonial navigation"></div>
+          <button class="testimonial-btn" id="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ GALLERY SECTION ══════════ -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Our Space</div>
+        <h2 class="section-title">Study Haven <span class="gradient-text">Gallery</span></h2>
+        <p class="section-desc">Take a look inside our world-class learning environment.</p>
+      </div>
+
+      <div class="masonry-grid reveal">
+        <div class="masonry-item tall" id="gallery-1">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Main Reading Hall</span>
+          </div>
+          <div class="gallery-placeholder gp-1">
+            <i class="fas fa-building-columns"></i>
+            <span>Main Reading Hall</span>
+          </div>
+        </div>
+        <div class="masonry-item" id="gallery-2">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Digital Resource Center</span>
+          </div>
+          <div class="gallery-placeholder gp-2">
+            <i class="fas fa-laptop"></i>
+            <span>Digital Center</span>
+          </div>
+        </div>
+        <div class="masonry-item" id="gallery-3">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Book Collection</span>
+          </div>
+          <div class="gallery-placeholder gp-3">
+            <i class="fas fa-book"></i>
+            <span>Book Collection</span>
+          </div>
+        </div>
+        <div class="masonry-item wide" id="gallery-4">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Study Cabins</span>
+          </div>
+          <div class="gallery-placeholder gp-4">
+            <i class="fas fa-door-closed"></i>
+            <span>Study Cabins</span>
+          </div>
+        </div>
+        <div class="masonry-item" id="gallery-5">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Group Discussion Room</span>
+          </div>
+          <div class="gallery-placeholder gp-5">
+            <i class="fas fa-people-group"></i>
+            <span>Discussion Room</span>
+          </div>
+        </div>
+        <div class="masonry-item tall" id="gallery-6">
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Mentoring Corner</span>
+          </div>
+          <div class="gallery-placeholder gp-6">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Mentoring Corner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MEMBERSHIP PLANS ══════════ -->
+  <section id="membership" class="section membership">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Pricing</div>
+        <h2 class="section-title">Membership <span class="gradient-text">Plans</span></h2>
+        <p class="section-desc">Choose a plan that fits your needs and budget. All plans include access to our core library facilities.</p>
+      </div>
+
+      <div class="billing-toggle reveal">
+        <span>Monthly</span>
+        <label class="toggle-switch" for="billing-toggle" aria-label="Toggle billing period">
+          <input type="checkbox" id="billing-toggle" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span>Yearly <span class="discount-badge">Save 20%</span></span>
+      </div>
+
+      <div class="pricing-grid reveal">
+
+        <!-- Basic -->
+        <div class="pricing-card glass-card" id="plan-basic">
+          <div class="plan-icon"><i class="fas fa-seedling"></i></div>
+          <h3 class="plan-name">Basic</h3>
+          <p class="plan-desc">Perfect for casual readers and light study sessions.</p>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount monthly-price">499</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Library Access (Weekdays)</li>
+            <li><i class="fas fa-check"></i> 50+ Study Materials</li>
+            <li><i class="fas fa-check"></i> Reading Room Access</li>
+            <li><i class="fas fa-check"></i> Community Forum Access</li>
+            <li class="disabled"><i class="fas fa-times"></i> Digital Resource Portal</li>
+            <li class="disabled"><i class="fas fa-times"></i> Career Guidance Sessions</li>
+            <li class="disabled"><i class="fas fa-times"></i> Private Study Cabins</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" id="btn-basic">Get Started</a>
+        </div>
+
+        <!-- Standard (Featured) -->
+        <div class="pricing-card glass-card featured" id="plan-standard">
+          <div class="featured-badge"><i class="fas fa-crown"></i> Most Popular</div>
+          <div class="plan-icon featured-icon"><i class="fas fa-star"></i></div>
+          <h3 class="plan-name">Standard</h3>
+          <p class="plan-desc">Best choice for serious students and competitive exam aspirants.</p>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount monthly-price">999</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Library Access (7 Days)</li>
+            <li><i class="fas fa-check"></i> All Study Materials</li>
+            <li><i class="fas fa-check"></i> Priority Reading Rooms</li>
+            <li><i class="fas fa-check"></i> Digital Resource Portal</li>
+            <li><i class="fas fa-check"></i> 2 Career Guidance Sessions/Month</li>
+            <li><i class="fas fa-check"></i> Mock Test Series Access</li>
+            <li class="disabled"><i class="fas fa-times"></i> Private Study Cabins</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block" id="btn-standard">Get Started</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card glass-card" id="plan-premium">
+          <div class="plan-icon"><i class="fas fa-gem"></i></div>
+          <h3 class="plan-name">Premium</h3>
+          <p class="plan-desc">All-inclusive experience for the most dedicated learners.</p>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount monthly-price">1499</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> 24/7 Library Access</li>
+            <li><i class="fas fa-check"></i> All Study Materials + Exclusives</li>
+            <li><i class="fas fa-check"></i> Private Study Cabins</li>
+            <li><i class="fas fa-check"></i> Full Digital Resource Portal</li>
+            <li><i class="fas fa-check"></i> Unlimited Career Guidance</li>
+            <li><i class="fas fa-check"></i> Full Mock Test Suite + Analytics</li>
+            <li><i class="fas fa-check"></i> Exclusive Workshops &amp; Events</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" id="btn-premium">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ SECTION ══════════ -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Have Questions?</div>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-desc">Everything you need to know about Study Haven. Can't find your answer? Contact us directly.</p>
+      </div>
+
+      <div class="faq-container reveal">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            What are the library's operating hours?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-1" role="region">
+            <p>Study Haven is open Monday to Friday from 6:00 AM to 11:00 PM, and on weekends from 7:00 AM to 10:00 PM. Premium members enjoy 24/7 access via their member card.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            Can I try the library before buying a membership?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-2" role="region">
+            <p>Yes! We offer a free 3-day trial pass for first-time visitors. Simply register at our front desk with a valid ID and experience everything Study Haven has to offer before committing to a plan.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            What resources are available for competitive exams?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-3" role="region">
+            <p>We have a dedicated competitive exams section with previous year papers (JEE, NEET, UPSC, SSC, Banking), curated study guides, mock test series, strategy books, and digital video lectures. Standard and Premium members get full access to all these resources.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            How do I book a private study cabin?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-4" role="region">
+            <p>Private study cabins can be booked through our mobile app or at the front desk. Standard members can book cabins at an additional charge of ₹50/hour. Premium members get unlimited cabin access included in their plan.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            Is there a student discount available?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-5" role="region">
+            <p>Yes, we offer a 15% student discount on all plans with a valid school/college ID. We also offer group discounts for friends who join together, and special scholarship memberships for meritorious but financially challenged students. Contact us for details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-6">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+            Can I cancel or upgrade my membership plan?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-6" role="region">
+            <p>Absolutely. You can upgrade or downgrade your plan at any time. Upgrades are effective immediately with prorated billing. Cancellations can be made before the next billing cycle. We offer a full refund within 7 days of initial purchase if you're not satisfied.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-7">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+            Do you offer digital-only memberships?
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-answer-7" role="region">
+            <p>Yes! We offer a Digital Access plan at ₹299/month that gives you access to our complete online resource portal, e-books, video lectures, and AI quiz platform — perfect for students who can't visit us in person.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT SECTION ══════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Get In Touch</div>
+        <h2 class="section-title">Contact <span class="gradient-text">Study Haven</span></h2>
+        <p class="section-desc">Have questions? We're here to help. Reach out to us through any of the channels below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <div class="contact-info-card glass-card" id="contact-phone">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 98765 43210</p>
+              <p>+91 80001 23456</p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card" id="contact-email">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@studyhaven.in</p>
+              <p>support@studyhaven.in</p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card" id="contact-address">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Address</h4>
+<p>
+Study Haven Library<br />
+Beerwah, Budgam, Jammu & Kashmir<br />
+Near the Beautiful Bairam and Sokhnag Rivers<br />
+Close to SAM Nursing College
+</p>            </div>
+          </div>
+          <div class="contact-info-card glass-card" id="contact-hours">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon–Fri: 6:00 AM – 11:00 PM</p>
+              <p>Weekends: 7:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder glass-card" id="map-placeholder">
+            <div class="map-inner">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>Interactive Map</p>
+              <span>42, Knowledge Park, Sector 5, Your City</span>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary mt-10">
+                <i class="fas fa-directions"></i> Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal reveal-right">
+          <form class="contact-form glass-card" id="contact-form" novalidate>
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="membership">Membership Enquiry</option>
+                <option value="resources">Resource Request</option>
+                <option value="career">Career Guidance</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success" role="alert">
+              <i class="fas fa-check-circle"></i> Message sent successfully! We'll get back to you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i class="fas fa-book-open"></i>
+              <span>Study<span class="accent">Haven</span></span>
+            </div>
+            <p>Your trusted partner for academic excellence. We empower students with the resources, environment, and guidance they need to succeed.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="Follow us on Twitter/X"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#membership">Membership</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Library Access</a></li>
+              <li><a href="#services">Study Materials</a></li>
+              <li><a href="#services">Exam Preparation</a></li>
+              <li><a href="#services">Reading Rooms</a></li>
+              <li><a href="#services">Career Guidance</a></li>
+              <li><a href="#services">Digital Resources</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-col footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to get the latest resources and exam notifications delivered to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form" novalidate>
+              <input type="email" id="newsletter-email" placeholder="Enter your email" required autocomplete="email" aria-label="Email for newsletter" />
+              <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <p class="newsletter-note"><i class="fas fa-shield-alt"></i> No spam. Unsubscribe anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Study Haven. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #f5576c;"></i> for every student.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ BACK TO TOP ══════════ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
